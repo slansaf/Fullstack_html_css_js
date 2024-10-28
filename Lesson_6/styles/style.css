@@ -1,0 +1,240 @@
+@import url("../fonts/stylesheet.css");
+
+.center{
+	padding-left: calc(50% - 570px);
+	padding-right: calc(50% - 570px);
+}
+.header{
+	background: rgb(34, 34, 34);
+	display: flex;
+	justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: center;
+	
+}
+
+.header__logo{
+	margin: 19px 0;
+	display: flex;
+	gap:33px;
+	
+}
+
+.header__menu{
+	display: flex;
+	gap:33px;
+}
+
+/*---------------ThE BRAND--------------------*/
+
+.thebrand{
+	background: rgb(241, 228, 230);
+	display: flex;
+	align-items: center;
+   text-transform: uppercase;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: flex-start;
+}
+
+.thebrand img{
+	max-width: 571px;
+}
+
+.thebrand__title{
+	/*border-left: 12px solid rgb(241, 109, 127);
+	padding-left: 16px;*/
+
+}
+
+.line{
+	display: block;
+	border: 6px solid rgb(241, 109, 127);
+	height: 72px;
+	margin-right: 16px;
+}
+
+.thebrand__title h1{
+	font-family: "Lato-Black";
+	font-size: 48px;
+	font-weight: 900;
+	text-align: left;
+	line-height: 15px;
+		
+}
+
+.thebrand__title h2{
+	font-family: "Lato";
+	font-size: 32px;
+	font-weight: 700;
+	text-align: left;
+	line-height: 20px;
+}
+
+.thebrand__title span{
+	color:rgb(241, 109, 127);
+}
+
+/*---------------Cards menu--------------------*/
+
+.cards_menu{
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	font-family: Lato;
+	margin-top: 65px;
+	
+}
+
+.cards_menu span{
+	color: rgb(241, 109, 127);
+	font-size: 27px;
+	font-weight: 700;
+	text-align: center;
+	font-family: Lato;
+	gap: 30px;
+}
+
+.cards_menu_three{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 30px;
+}
+
+.cards_menu__women, .cards_menu__men, .cards_menu__kids, .cards_menu__accesories{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+
+.cards_menu__women{
+	background-image: url(../img/for_women.png);
+	width: 360px;
+	height: 260px;
+}
+
+.cards_menu__men {
+	background-image: url(../img/fot_men.jpeg);
+	width: 360px;
+	height: 260px;
+}
+
+.cards_menu__kids {
+	background-image: url(../img/for_kids.jpeg);
+	width: 360px;
+	height: 260px;
+}
+
+.cards_menu__accesories{
+	background-image: url(../img/accesories.jpeg);
+
+	height: 180px;
+	margin-top: 30px;
+	margin: 0 auto;
+}
+
+
+/*---------------Fetured Items--------------------*/
+.fetured_items{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	
+}
+
+h2.fetured_items__head{
+	font-family: Lato;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 36px;
+	text-align: left;
+	color: rgb(34, 34, 34);
+	margin-top: 96px;
+	text-align: center;
+}
+
+.fetured_items__text{
+	margin-top: -20px;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	color: rgb(159, 159, 159);
+	text-align: center;
+}
+
+.items{
+	background: rgb(248, 248, 248);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.card_items{
+	padding: 24px 16px 24px 16px;
+}
+
+.items img{
+	/* max-width: 360px; */
+}
+
+.items h3{
+	font-family: Lato;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: left;
+	color: rgb(0, 0, 0);
+}
+
+.items p{
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 17px;
+	text-align: left;
+	color: rgb(93, 93, 93);
+}
+
+p.card_items__price{
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 1400;
+	text-align: left;
+	color: rgb(241, 109, 127);
+}
+
+.fetured_items__grid{
+	display: grid;
+	gap:30px;
+	grid-template-columns: repeat(3, 360px);
+	justify-content: center;
+	margin-bottom: 49px;
+}
+
+.fetured_items__button{
+	border: 1px solid rgb(255, 106, 106);
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	text-align: center;
+	color: rgb(242, 99, 118);
+	padding: 15px 39px;
+	margin-bottom: 95px;
+	background-color: rgb(255, 255, 255);
+}
