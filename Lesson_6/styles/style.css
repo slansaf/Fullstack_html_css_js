@@ -435,4 +435,5 @@ p.card_items__price{
 	.subscribe_main{
 		flex-direction: column;
 		gap: 48px;
+	}
 }
