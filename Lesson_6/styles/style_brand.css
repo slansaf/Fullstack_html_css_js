@@ -11,22 +11,21 @@
 
 .header{
 	background: rgb(34, 34, 34);
+}
+
+.header_main{
 	display: flex;
 	justify-content: space-between;
    align-items: center;
    flex-direction: row;
    flex-wrap: wrap;
    align-content: center;
+	padding: 19px 0;
 	
 }
 
 .header__logo{
-	margin: 19px 0;
 	display: flex;
-	flex-direction: row;
-   flex-wrap: wrap;
-   align-content: center;
-   align-items: center;
 	gap:33px;
 	
 }
@@ -34,8 +33,28 @@
 .header__menu{
 	display: flex;
 	gap:33px;
+	position: relative;
 }
 
+.icon:hover path{
+	fill:rgb(241, 109, 127);
+	transition: all 0.3s;
+}
+
+.number{
+	background: rgb(241, 109, 127);
+	padding: 1px 5px;
+	font-family: Lato;
+	text-align: center;
+	border-radius: 50%;
+	font-weight: 400;
+	line-height: 14px;
+	font-size: 12px;
+	color: rgb(225, 225, 225);
+	position: absolute;
+	top: -8px;
+	right: -8px;
+}
 /*---------------ThE BRAND--------------------*/
 
 .thebrand{
@@ -47,6 +66,7 @@
    flex-wrap: wrap;
    align-content: center;
    justify-content: flex-start;
+	position: relative;
 }
 
 .thebrand img{
@@ -86,6 +106,45 @@
 
 .thebrand__title span{
 	color:rgb(241, 109, 127);
+}
+
+.dropdown_menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 232px;
+	background: rgb(255, 255, 255);
+	box-shadow: 0px 0px 10px 2px rgb(194, 194, 194);;
+	text-transform: none;
+	padding:33px 75px 20px 33px;
+	font-family: Lato;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: left;
+}
+
+.dropdown_menu h4{
+	font-weight: 700;
+	
+	color: rgb(0, 0, 0);
+	margin-bottom: 24px;
+}
+
+.dropdown_menu p{
+	font-weight: 400;
+	color: rgb(241, 109, 127);
+	margin-top: 8px;
+	margin-bottom: 12px;
+}
+
+.dropdown_menu ul{
+	padding-left: 22px;
+}
+
+.dropdown_menu a{
+	font-weight: 400;
+	color: rgb(111, 110, 110);
+	margin-bottom: 12px;
 }
 
 /*---------------Cards menu--------------------*/
@@ -160,7 +219,6 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 6px;
-	
 }
 
 h2.fetured_items__head{
@@ -242,7 +300,62 @@ p.card_items__price{
 	padding: 15px 39px;
 	margin-bottom: 95px;
 	background-color: rgb(255, 255, 255);
+	transition: all 0.3s;
 }
+
+.fetured_items__button:hover{
+	border: 1px solid rgb(255, 106, 106);
+	background: rgb(241, 109, 127);
+	color: rgb(255, 255, 255);
+}
+
+.items__img{
+	position: relative;
+	display: inline-block;
+}
+
+.items__img img{
+	width: 100%;
+	height: auto;
+	transition: filter 0.3s ease-in-out;
+}
+
+.hiden_button{
+	padding: 10px 20px;
+	font-family: Lato;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	border: 1px solid rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+
+.items__img:hover img{
+	filter: brightness(60%);
+}
+
+.items__img:hover .hiden_button{
+	opacity: 1;
+	visibility: visible;
+}
+
+.hiden_button::before{
+	content: url(../img/cart.svg);
+}
+
+
 
 /* --------------- The black section --------------- */
 
@@ -309,7 +422,6 @@ p.card_items__price{
 
 .subscribe__item1 {
 	font-family: Lato;
-	font-style: italic;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
@@ -320,6 +432,10 @@ p.card_items__price{
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
+}
+
+.subscribe__item1 span{
+	font-style: italic;
 }
 
 .subscribe__item2 h4{
@@ -336,6 +452,16 @@ p.card_items__price{
 	color: rgb(34, 34, 36);
 }
 
+form{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	margin-top: 32px; 
+}
+
 .subscribe__item2 input{
 	font-family: Lato;
 	font-size: 14px;
@@ -343,9 +469,9 @@ p.card_items__price{
 	text-align: left;
 	color: rgb(34, 34, 36);
 	background: rgb(225, 225, 225);
-	padding: 10px 22px;
-	margin-top: 32px;
-	border-radius: 15px 0 0 15px;
+	padding: 15px 22px;
+	border-radius: 20px 0 0 20px;
+	width: 250px;
 }
 
 .subscribe__item2 button{
@@ -355,10 +481,19 @@ p.card_items__price{
 	text-align: center;
 	color: rgb(255, 255, 255);
 	background: rgb(241, 109, 127);
-	padding: 10px 22px;
-	border-radius: 0 15px 15px 0;
+	padding: 15px 22px;
+	border-radius: 0 20px 20px 0;
+	transition: 0.3s;
 }
 
+.subscribe__item2 input:focus::placeholder{
+	color: transparent;
+}
+
+.subscribe__item2 button:hover{
+	background-color: rgb(255, 255, 255);
+	color: rgb(241, 109, 127);
+}
 /*--------------------- FOOTER --------------------*/
 
 .footer{
@@ -383,6 +518,28 @@ p.card_items__price{
 	text-align: left;
 	color: rgb(251, 251, 251);
 }
+
+.footer__icon{
+	display: flex;
+	gap: 7px;
+}
+.rectangle{
+	background-color: rgb(225, 225, 225);
+	width: 32px;
+	height: 32px;
+	transition: all 0.3s;
+}
+
+.rectangle:hover{
+	background-color: rgb(241, 109, 127);
+}
+
+.rectangle:hover path{
+	fill:rgb(251, 251, 251);
+	padding: 32px;
+	transition: all 0.3s;
+}
+/* --------------------------------- */
 
 @media (min-width: 736px) and (max-width: 1140px){
 	.center{
